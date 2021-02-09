@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <a href="" class="btn btn-success">ADD</a>
+                        <a href="{{route('user.create')}}" class="btn btn-success">ADD</a>
                         <form action="" class="card-tools">
 
                             <div  class="card-tools">
@@ -41,13 +41,13 @@
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>
-{{--                                        @foreach($user->roles as $role)--}}
-{{--                                            {{$role->name . ';'}}--}}
-{{--                                        @endforeach--}}
+                                        @foreach($user->roles as $role)
+                                            {{$role->name . ';'}}
+                                        @endforeach
                                     </td>
-                                    <td><a onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" href=""
+                                    <td><a onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" href="{{route('delete.store', $user->id)}}"
                                            class="btn btn-danger">Delete</a>
-                                        <a href="" class="btn btn-primary">Edit</a>
+                                        <a href="{{route('update.store', $user->id)}}" class="btn btn-primary">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach
