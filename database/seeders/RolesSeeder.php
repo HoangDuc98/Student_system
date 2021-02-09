@@ -20,12 +20,20 @@ class RolesSeeder extends Seeder
 
 
         $role = new Role();
-        $role->name = 'student';
+        $role->name = 'Học Sinh';
         $role->save();
 
 
         $role = new Role();
-        $role->name = 'user';
+        $role->name = 'Cô giáo';
+        $role->save();
+
+        $role = new Role();
+        $role->name = 'Ban giám hiệu';
+        $role->save();
+
+        $role = new Role();
+        $role->name = 'Giáo vụ';
         $role->save();
     }
 }

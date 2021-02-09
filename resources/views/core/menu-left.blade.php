@@ -15,11 +15,6 @@
             </div>
             <div class="info">
                 <a href="#" class="d-block">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
-{{--                <ul>--}}
-{{--                    <li><a href=""><i class="sl sl-icon-user"></i> Cập nhật thông tin</a></li>--}}
-{{--                    <li><a href=""><i class="sl sl-icon-docs"></i> Nhà tôi đã đăng</a></li>--}}
-{{--                    <li><a href="{{ route('logout') }}"><i class="sl sl-icon-power"></i> Đăng xuât</a></li>--}}
-{{--                </ul>--}}
             </div>
 
         </div>
@@ -42,27 +37,14 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item menu-open">
-                    <a href="#" class="nav-link active">
+                    <a href="{{route('user.index')}}" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Dashboard
+                            Danh Sách Người Dùng
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('login')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Đăng Nhập</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('login')}}" class="nav-link active">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Log out</p>
-                            </a>
-                        </li>
-                    </ul>
+
                 </li>
                 <li class="nav-item">
                     <a href="pages/widgets.html" class="nav-link">
@@ -547,106 +529,91 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-search"></i>
-                        <p>
-                            Search
-                            <i class="fas fa-angle-left right"></i>
+                    <a href="{{route('logout')}}" class="nav-link">
+                        <span class="iconify" data-icon="ion-man-outline" data-inline="false"></span>                        <p>
+                            Đăng Xuất
+{{--                            <i class="fas fa-angle-left right"></i>--}}
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/search/simple.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Simple Search</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/search/enhanced.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Enhanced</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
-                <li class="nav-header">MISCELLANEOUS</li>
-                <li class="nav-item">
-                    <a href="iframe.html" class="nav-link">
-                        <i class="nav-icon fas fa-ellipsis-h"></i>
-                        <p>Tabbed IFrame Plugin</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://adminlte.io/docs/3.1/" class="nav-link">
-                        <i class="nav-icon fas fa-file"></i>
-                        <p>Documentation</p>
-                    </a>
-                </li>
-                <li class="nav-header">MULTI LEVEL EXAMPLE</li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-circle nav-icon"></i>
-                        <p>Level 1</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-circle"></i>
-                        <p>
-                            Level 1
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Level 2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>
-                                    Level 2
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Level 2</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-circle nav-icon"></i>
-                        <p>Level 1</p>
-                    </a>
-                </li>
+{{--                <li class="nav-header">MISCELLANEOUS</li>--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a href="iframe.html" class="nav-link">--}}
+{{--                        <i class="nav-icon fas fa-ellipsis-h"></i>--}}
+{{--                        <p>Tabbed IFrame Plugin</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a href="https://adminlte.io/docs/3.1/" class="nav-link">--}}
+{{--                        <i class="nav-icon fas fa-file"></i>--}}
+{{--                        <p>Documentation</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                <li class="nav-header">MULTI LEVEL EXAMPLE</li>--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a href="#" class="nav-link">--}}
+{{--                        <i class="fas fa-circle nav-icon"></i>--}}
+{{--                        <p>Level 1</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a href="#" class="nav-link">--}}
+{{--                        <i class="nav-icon fas fa-circle"></i>--}}
+{{--                        <p>--}}
+{{--                            Level 1--}}
+{{--                            <i class="right fas fa-angle-left"></i>--}}
+{{--                        </p>--}}
+{{--                    </a>--}}
+{{--                    <ul class="nav nav-treeview">--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="#" class="nav-link">--}}
+{{--                                <i class="far fa-circle nav-icon"></i>--}}
+{{--                                <p>Level 2</p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="#" class="nav-link">--}}
+{{--                                <i class="far fa-circle nav-icon"></i>--}}
+{{--                                <p>--}}
+{{--                                    Level 2--}}
+{{--                                    <i class="right fas fa-angle-left"></i>--}}
+{{--                                </p>--}}
+{{--                            </a>--}}
+{{--                            <ul class="nav nav-treeview">--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="#" class="nav-link">--}}
+{{--                                        <i class="far fa-dot-circle nav-icon"></i>--}}
+{{--                                        <p>Level 3</p>--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="#" class="nav-link">--}}
+{{--                                        <i class="far fa-dot-circle nav-icon"></i>--}}
+{{--                                        <p>Level 3</p>--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="#" class="nav-link">--}}
+{{--                                        <i class="far fa-dot-circle nav-icon"></i>--}}
+{{--                                        <p>Level 3</p>--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="#" class="nav-link">--}}
+{{--                                <i class="far fa-circle nav-icon"></i>--}}
+{{--                                <p>Level 2</p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a href="#" class="nav-link">--}}
+{{--                        <i class="fas fa-circle nav-icon"></i>--}}
+{{--                        <p>Level 1</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 
             </ul>
         </nav>

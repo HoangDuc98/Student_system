@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{asset('css/OverlayScrollbars.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('css/adminlte.min.css')}}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     @toastr_css
 
 </head>
@@ -64,6 +66,8 @@
 <script src="{{asset('js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('js/dashboard2.js')}}"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
 @toastr_js
 @toastr_render
